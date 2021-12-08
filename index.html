@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Title</title>
+<style>
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+    header{
+        color: black;
+        background-color: dodgerblue;
+        text-align: center;
+        height: 50px;
+        font-size: 30px;
+        font-family: "calibri";
+        font-weight: bold;
+    }
+    .thebeginning{
+        background-color: seagreen;
+        font-weight: bold;
+    }
+footer{
+    height: 80px;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+
+</style>
+</head>
+
+<body>
+<header>
+  THE INTERNET-A BEGINNING OF SOMETHING UNIQUE AND INNOVATIVE
+</header>
+{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+	    {% for message in messages %}
+		  <div class="alert alert-warning alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			{{message}}
+		  </div>
+		{% endfor %}
+	  {% endif %}
+	{% endwith %}
+
+	{% block body %}{% endblock %}
+
+<article class="thebeginning">
+  <img src="{{url_for('static', filename='microsoft1.jpg')}}">
+        <p>
+           Internet something unknown, not only for common people but to one of the most sophisticated brains in the industry at the time. Couldn’t judge the power and vastness of it even when began to invest in it, which is responsible for today worlds telecommunications, messages, mails, information, e-commerce, business, weapons, transportation, news etc. in every nook of worldly things there is internet. Originated in the early 1950’s,
+
+           J.C.R Licklider who is considered as the father of the internet was a professor in UMass. Once when the computers were very big and having one computer is very huge in those days, communicating with each other was very difficult doing login and updating each and every computer was taking a lot of time. Then Licklider came up with a brilliant idea of Intergalactic Computer Network, which was like having a remote computer login where it is connected to all other computers after helped ARPA in their space program by computer communications, later it was named as ARPAnet which later was succeeded by INTERNET later Leonard Klienrock a Professor from MIT came up with a brilliant idea of queuing theory and communication which was simply Demand Access and Distributed access for better communication, which was used to control regulate and reroute traffic at that time. As there was serious concerns about telecommunications as the only way of communication for the military, there comes Paul Baren who introduced Fish Network called Hot Potato Routing, by cutting up data into bits and bits and sending them though few nodes, just like mice in a maze.
+
+           Then came the Internet big idea Time-Sharing in 1969 by Bob Taylor, created a terminal for different servers can login into remote computers and servers and can share important files to another computer.
+
+           Then Larry Roberts build computer networks by using packets system, which was sponsored by small company BBN, which is nothing but sending information by packets, from nodes to nodes, each node will have a copy of the packet and will send the packets until an acknowledgment is received.
+           Later on the ARPAnet and INTERNET was released open to the public, eventually ARPAnet was shut down and INTERNET was on the throne.
+         </p>
+</article>
+<footer>
+    Author:Varun
+    <ul><li><a href="https://mail.google.com/mail/u/1/#inbox">vj6@njit.edu</a></li></ul>
+
+</footer>
+
+</body>
+</html>
